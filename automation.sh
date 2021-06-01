@@ -5,7 +5,7 @@ dpkg -s apache2 &> /dev/null
 if [ $? -ne 0 ]
 then
 echo "Installing apache"
-sudo apt-get install apache2 &> /dev/null
+sudo apt-get install apache2
 fi
 sudo service apache2 status | grep "running" &> /dev/null 	 #Ensure that the apache2 service is running.
 if [ $? -ne 0 ]
